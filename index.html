@@ -1,395 +1,516 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Jesus Sena - Portfólio</title>
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
+    ></script>
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Urbanist:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 
-<head>
-  <meta charset="UTF-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Jesus Sena - Portfólio</title>
-  <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
-  <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
-  <style>
-    @import url("https://fonts.googleapis.com/css2?family=Urbanist:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
 
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
+      body {
+        font-family: "Urbanist", sans-serif;
+        display: flex;
+      }
 
-    .no-select {
-      -webkit-user-select: none;
-      -moz-user-select: none;
-      -ms-user-select: none;
-      user-select: none;
-    }
+      .no-select {
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+      }
 
-    nav {
-      color: whitesmoke;
-      background: #007058;
-      height: 100vh;
-      padding: 50px 30px;
-      max-width: 350px;
-      position: relative;
-      overflow: hidden;
-      display: flex;
-      flex-direction: column;
-    }
+      nav {
+        height: 100vh;
+        color: whitesmoke;
+        background: #007058;
+        padding: 50px 30px;
+        max-width: 350px;
+        position: relative;
+        overflow: hidden;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+      }
 
-    nav h1 {
-      top: -55px;
-      right: -70px;
-      white-space: nowrap;
-      position: absolute;
-      writing-mode: vertical-rl;
-      text-orientation: upright;
-      font-size: 8.4em;
-      font-weight: 900;
-      letter-spacing: -50px;
-      margin-bottom: 20px;
-      color: rgba(0, 0, 0, 0.05);
-    }
+      nav h1 {
+        top: -60px;
+        right: -0.5em;
+        white-space: nowrap;
+        position: absolute;
+        writing-mode: vertical-rl;
+        text-orientation: upright;
+        font-size: 14vh;
+        font-weight: 900;
+        letter-spacing: -5vh;
+        margin-bottom: 20px;
+        color: rgba(0, 0, 0, 0.1);
+      }
 
-    nav .menu-item {
-      font-size: 1.5em;
-      display: flex;
-      flex-direction: column;
-      list-style: none;
-      gap: 5px;
-      font-weight: 800;
-      text-transform: uppercase;
-      cursor: pointer;
-    }
+      .top-area .menu {
+        font-size: 1.5em;
+        display: flex;
+        flex-direction: column;
+        list-style: none;
+        gap: 5px;
+        font-weight: 800;
+        text-transform: uppercase;
+      }
 
-    .active {
-      color: red;
-    }
+      .top-area .submenu {
+        padding: 5px 0;
+        font-size: 0.75em !important;
+        list-style: none;
+        font-size: 0.75em;
+        font-weight: 400;
+        padding-left: 20px;
+      }
 
-    nav .menu .submenu {
-      list-style: none;
-      font-size: 0.75em;
-      font-weight: 400;
-      padding-left: 20px;
-    }
+      nav .menu .submenu li::before {
+        content: "- ";
+      }
 
-    nav .menu .submenu li::before {
-      content: "- ";
-    }
+      .top-area .menu li a {
+        text-decoration: none;
+        color: whitesmoke;
+      }
 
-    nav .spacer {
-      flex: 1;
-    }
+      .down-area .informations {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        list-style: none;
+      }
 
-    .line {
-      margin: 10px 0;
-      width: 50%;
-      height: 1px;
-      background: rgba(0, 0, 0, 0.05);
-    }
+      .down-area .informations li {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+      }
 
-    .links {
-      display: flex;
-      flex-direction: column;
-      list-style: none;
-    }
+      .down-area .informations li a {
+        text-decoration: none;
+        color: whitesmoke;
+        font-weight: 500;
+      }
 
-    .links li {
-      display: flex;
-      align-items: center;
-      gap: 10px;
-      padding: 5px 0;
-    }
+      .down-area .informations li a:hover {
+        text-decoration: underline;
+      }
 
-    .links li ion-icon {
-      font-size: 1.25em;
-    }
+      .line {
+        margin: 10px 0;
+        width: 50%;
+        height: 1px;
+        background: rgb(0, 0, 0, 0.5);
+      }
 
-    body {
-      font-family: "Urbanist", sans-serif;
-      display: flex;
-    }
+      main {
+        background: #70fadc;
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        gap: 2px;
+        padding: 6vw;
+        max-height: 100vh;
+        overflow-y: scroll;
+      }
 
-    main {
-      background: #70fadc;
-      flex: 1;
-      display: flex;
-      flex-direction: column;
-      gap: 2px;
-      padding: 6vw;
-      max-height: 100vh;
-      overflow-y: scroll;
+      .about .title,
+      .projects .title {
+        font-size: 1.75em;
+        font-weight: 700;
+        margin: 10px 0;
+      }
 
-    }
+      .about-text {
+        font-size: 1.25em;
+        text-align: justify;
+      }
 
-    main .projeto {
-      padding: 10px;
-    }
+      .header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 35px;
+      }
 
-    .redes a {
-      text-decoration: none;
-      color: white;
-      font-weight: 500;
-    }
+      .header img {
+        width: 200px;
+        border-radius: 100%;
+      }
 
-    .redes a:hover {
-      text-decoration: underline;
-    }
+      .header .informations {
+        flex: 1;
+      }
 
-    .sobre {
-      font-size: 1.5em;
-    }
+      .header .informations .name {
+        font-size: 2em;
+        font-weight: 500;
+        line-height: 35px;
+        margin-bottom: 10px;
+      }
 
-    .header {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      gap: 35px;
-    }
+      .header .informations .place,
+      .header .informations .course {
+        font-size: 1.25em;
+        font-weight: 400;
+      }
 
-    .header img {
-      width: 200px;
-      border-radius: 100%;
-    }
+      .project-info {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        margin-top: 25px;
+      }
 
-    .header .informations {
-      flex: 1;
-    }
+      .project-details {
+        display: flex;
+        flex-direction: row;
+        gap: 60px;
+        align-items: flex-start;
+        font-size: 1.2em;
+      }
 
-    .header .informations .name {
-      font-size: 1.5em;
-      font-weight: 500;
-    }
+      .img-sisu {
+        border-radius: 6px;
+        max-width: 516px;
+        width: 40vw;
+        float: left;
+        margin: 0 25px 10px 0;
+      }
 
-    .header .informations .place,
-    .header .informations .course {
-      font-size: 0.75em;
-      font-weight: 400;
-    }
+      .img-spotted {
+        max-width: 499px;
+        border-radius: 6px;
+        width: 40vw;
+        float: left;
+        margin: 0 25px 10px 0;
+      }
 
-    .sobre .title {
-      font-size: 1.5em;
-      font-weight: 500;
-    }
+      .divisor {
+        width: 50%;
+        height: 1px;
+        margin: 40px auto;
+        background: green;
+      }
 
-    .project-info {
-      display: flex;
-      flex-direction: column;
-      gap: 10px;
-    }
+      .project-title {
+        text-decoration: none;
+        color: black;
+        font-weight: 600;
+        font-size: 25px;
+      }
 
-    .about-text {
-      font-size: .75em;
-      text-align: justify;
-    }
+      .project-description {
+        text-align: justify;
+      }
 
-    .project-details {
-      display: flex;
-      flex-direction: row;
-      gap: 64px;
-      align-items: center;
-    }
+      .project-description strong {
+        margin-bottom: 20px;
+      }
 
-    .img-sisu {
-      width: 421px;
-      height: 588px;
-      margin-top: 20px;
-    }
+      .project-title::before {
+        content: "||";
+        padding-right: 10px;
+      }
 
-    .img-spotted {
-      width: 499px;
-      height: 515px;
-      margin-top: 20px;
-    }
+      .menu-toggle ion-icon {
+        font-size: 2em;
+        margin-bottom: 20px;
+        cursor: pointer;
+        display: none;
+      }
 
-    .divisor {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
+      .closed {
+        left: 0;
+      }
 
-    .divisor div {
-      width: 500px;
-      height: 2px;
-      border-radius: 10px;
-      border: #007058 2px solid;
-      margin: 60px 0;
-    }
+      .closed .menu-toggle {
+        color: #007058;
+      }
 
-    .project-title {
-      text-decoration: none;
-      color: black;
-      font-weight: 700;
-      font-size: 20px;
-    }
+      @media only screen and (max-width: 1400px) {
+        .menu-toggle {
+          position: fixed;
+          left: 25px;
+          top: 40px;
+        }
 
-    .project-title:hover {
-      text-decoration: underline;
-    }
+        .menu-toggle ion-icon {
+          display: block;
+        }
 
-    .navi {
-      list-style: none;
-      font-size: 0.75em;
-      font-weight: 400;
-      padding-left: 20px;
-      text-decoration: none;
-      color: white;
-    }
+        .closed {
+          left: -350px;
+          position: fixed;
+        }
 
-    .menu-item a {
-      color: white;
-      text-decoration: none;
-    }
-  </style>
-</head>
+        .top-area {
+          padding-top: 60px;
+        }
 
-<body>
-  <nav>
-    <h1 class="no-select">JESUSSENA</h1>
-    <ul class="menu">
-      <li class="menu-item"><a href="#tip-about" class="navtitle">Sobre</a></li>
-      <li class="menu-item">
-        Projetos
-        <ul class="submenu">
-          <li class="submenu-item"><a href="#tip-sisu" class="navi">MeuSiSU</a></li>
-          <li class="submenu-item"><a href="#tip-spotted" class="navi">Spotted CAASO</a></li>
+        .project-details img {
+          width: 40vw;
+        }
+
+        nav {
+          position: fixed;
+        }
+
+        main {
+          padding-left: 100px;
+        }
+      }
+
+      @media only screen and (max-width: 500px) {
+        .about .header {
+          flex-direction: column;
+          align-items: center;
+        }
+      }
+    </style>
+
+    <script>
+      document.readyState !== "loading"
+        ? load()
+        : document.addEventListener("DOMContentLoaded", load);
+
+      function load() {
+        const menu = document.querySelector("nav");
+        const menuToggle = document.querySelector(".menu-toggle ion-icon");
+
+        menuToggle.addEventListener("click", () => {
+          menu.classList.toggle("closed");
+        });
+      }
+    </script>
+  </head>
+
+  <body>
+    <nav>
+      <h1 class="no-select">JESUSSENA</h1>
+
+      <div class="top-area">
+        <ul class="menu">
+          <li class="menu-toggle"><ion-icon name="menu-outline"></ion-icon></li>
+          <li><a href="#tip-about">ABOUT</a></li>
+          <li>
+            <a href="#tip-sisu">PROJECTS</a>
+            <ul class="submenu">
+              <li><a href="#tip-sisu">MeuSiSU</a></li>
+              <li><a href="#tip-spotted">Spotted CAASO</a></li>
+            </ul>
+          </li>
         </ul>
-      </li>
-    </ul>
-    <div class="spacer"></div>
-    <ul class="links">
-      <li>
-        <ion-icon name="navigate-outline"></ion-icon>Av. Francisco Pereira
-        Lopes - São Carlos
-      </li>
-      <li><ion-icon name="call-outline"></ion-icon>(19) 98440-6234</li>
-      <li><ion-icon name="mail-outline"></ion-icon>jesusfernandes@usp.br</li>
-    </ul>
-    <div class="line"></div>
-    <div class="redes">
-      <p>
-        <ion-icon name="logo-github"></ion-icon><a href="https://github.com/SenaJesus" target="_blank">GitHub</a>
-      </p>
-      <p>
-        <ion-icon name="logo-linkedin"></ion-icon><a href="https://www.linkedin.com/in/jesus-sena-a838b9262/"
-          target="_blank">Linkedin</a>
-      </p>
-    </div>
-  </nav>
-
-  <main>
-    <div id="tip-about"></div>
-    <div class="sobre">
-      <div class="header">
-        <img src="https://i.ibb.co/Jn4sFVx/Jesus-Fernandes-2.jpg" />
-        <div class="informations">
-          <p class="name">Jesus Sena Fernandes</p>
-          <p class="place">São Carlos, São Paulo - Brasil</p>
-          <p class="course">USP - Computer Science</p>
-        </div>
       </div>
 
-      <br />
-
-      <p class="title">About me</p>
-
-      <div class="about-text">
-        <p>
-          I am a Computer Science student at USP (University of São Paulo)
-          with three years of experience in data analysis, industrial
-          automation, web scraping and system development at Procter & Gamble.
-        </p>
-
-        <br />
-
-        <p>
-          During my time at P&G, I developed several applications involving
-          sales trend analysis and customer profiling. These applications
-          significantly accelerated end-to-end turnaround time and worked on
-          projects that aimed to replace manual tasks with automated systems,
-          resulting in improved agility, quality, productivity, and reduced
-          errors and labor costs.
-        </p>
-
-        <br />
-
-        <p>
-          In addition, I completed a technical degree in Eletroeletrônica with
-          a focus on industrial automation at Colégio Técnico de Campinas
-          during my high school years.
-        </p>
-
-        <br />
-
-        <p>
-          Currently, I am actively participating in a web development
-          extension group at my university, where my main goal is to become a
-          full-stack professional in this field.
-        </p>
+      <div class="down-area">
+        <ul class="informations">
+          <li>
+            <ion-icon name="navigate-outline"></ion-icon>Av. Francisco
+            PereiraLopes - São Carlos
+          </li>
+          <li><ion-icon name="call-outline"></ion-icon>(19) 98440-6234</li>
+          <li>
+            <ion-icon name="mail-outline"></ion-icon>jesusfernandes@usp.br
+          </li>
+          <li class="list-divisor"></li>
+          <li>
+            <ion-icon name="logo-github"></ion-icon
+            ><a href="https://github.com/SenaJesus" target="_blank">GitHub</a>
+          </li>
+          <li>
+            <ion-icon name="logo-linkedin"></ion-icon
+            ><a
+              href="https://www.linkedin.com/in/jesus-sena-a838b9262/"
+              target="_blank"
+              >Linkedin</a
+            >
+          </li>
+        </ul>
       </div>
-    </div>
-    <div class="divisor">
-      <div></div>
-    </div>
-    <div id="tip-sisu"></div>
-    <div class="project">
-      <div class="project-info">
-        <div>
-          <a class="project-title" href="https://meusisu.com/" target="_blank">MEUSISU.com</a>
-          <div class="project-details">
-            <div><img class="img-sisu" src="https://i.ibb.co/3F6HCDz/meusisu.png"></div>
-            <div>
-              <strong>THE PROJECT</strong>
-              <p class="txt-sisu"><br>I, along with two friends, developed the first website in Brazil to provide
-                information on daily
-                partial
-                cutoff scores for the SISU.<br><br>The project involved creating a clean and fast interface to allow
-                students
-                preparing for the ENEM to
-                easily analyze their chances of getting into their dream courses.<br><br>Since the government does not
-                provide such information, we embarked on a parallel web scraping project that was able to daily collect
-                over 160000 data points for all available courses. We then organized this data in our database so that
-                the
-                website could automatically display it.<br><br>Throughout the project, I honed my project planning
-                skills,
-                starting with designing the interface using Figma.<br><br>We also collaborated with various professors
-                from renowned test preparation courses in Brazil to gather feedback and find the best approach for
-                creating the website.
-              </p>
+    </nav>
 
-            </div>
+    <main>
+      <span id="tip-about"></span>
+
+      <div class="about">
+        <div class="header">
+          <img src="https://i.ibb.co/Jn4sFVx/Jesus-Fernandes-2.jpg" />
+          <div class="informations">
+            <p class="name">Jesus Sena Fernandes</p>
+            <p class="place">São Carlos, São Paulo - Brasil</p>
+            <p class="course">USP - Computer Science</p>
           </div>
         </div>
-        <div></div>
+
+        <br />
+
+        <p class="title">About me</p>
+
+        <div class="about-text">
+          <p>
+            I am a Computer Science student at USP (University of São Paulo)
+            with three years of experience in data analysis, industrial
+            automation web scraping and system development at Procter & Gamble.
+          </p>
+
+          <br />
+
+          <p>
+            During my time at P&G, I developed various applications involving
+            sales trend analysis and customer profiling. These applications
+            significantly accelerated end-to-end turnaround time and worked on
+            projects that aimed to replace manual tasks with automated systems,
+            resulting in improved agility, quality, productivity, and reduced
+            errors and labor costs.
+          </p>
+
+          <br />
+
+          <p>
+            In addition, I completed a technical degree in Eletroeletrônica with
+            a focus on industrial automation at Colégio Técnico de Campinas
+            during my high school years.
+          </p>
+
+          <br />
+
+          <p>
+            Currently, I am actively participating in a web development
+            extension group at my university, where my main goal is to become a
+            full-stack professional in this field.
+          </p>
+        </div>
       </div>
-      <div class="divisor">
-        <div></div>
-      </div>
-      <div id="tip-spotted"></div>
-      <div class=" project">
+
+      <div class="divisor"></div>
+
+      <div class="projects">
+        <span id="tip-sisu"></span>
+
+        <p class="title">Projects</p>
+
         <div class="project-info">
-          <div>
-            <p class="project-title">Automatic Spotted</p>
-            <div class="project-details">
-              <div><img class="img-spotted"
-                  src="https://i.ibb.co/B4gQbK8/343795824-549887887053998-6685332376784681196-n.png"></div>
-              <div>
+          <a class="project-title" href="https://meusisu.com/" target="_blank"
+            >MEUSISU.com</a
+          >
+          <div class="project-details">
+            <div class="project-description">
+              <p class="txt-sisu">
+                <img
+                  class="img-sisu"
+                  src="https://i.ibb.co/3F6HCDz/meusisu.png"
+                />
                 <strong>THE PROJECT</strong>
-                <p class="txt-sisu"><br>I developed a project that automated the entire manual process of creating
-                  Instagram posts for a university entity. <br><br>Previously, when a student submitted a "letter"
-                  through a Google form, the account administrators had to manually create the artwork for the post.
-                  With the goal of speeding up the process, the project involved a system hosted on a server that
-                  automatically collected these letters from the form, generated the corresponding artwork, and
-                  requested confirmation from moderators to verify if the publication was feasible. <br><br>By doing so,
-                  we significantly reduced the time required to create posts and ensured greater efficiency in the
-                  Instagram publishing process.
+
+                <br />
+                <br />
+
+                <p>
+                  I, along with two friends, developed the first website in Brazil
+                  to provide information on daily partial cutoff scores for the
+                  SISU.
+                </p>
+                  
+                <br />
+
+                <p>
+                  The project involved creating a clean and fast interface to
+                  allow students preparing for the ENEM to easily analyze their
+                  chances of getting into their dream courses.
+                </p>
+                  
+                <br />
+
+                <p>
+                  Since the government does not provide such information, we
+                  embarked on a parallel web scraping project that was able to
+                  daily collect over 160000 data points for all available courses.
+                  We then organized this data in our database so that the website
+                  could automatically display it.
                 </p>
 
-              </div>
+                <br />
+
+                <p>
+                  Throughout the project, I honed my project planning skills,
+                  starting with designing the interface using Figma.
+                </p>
+                  
+                <br/>
+
+                <p>
+                  We also collaborated with various professors from renowned test
+                  preparation courses in Brazil to gather feedback and find the
+                  best approach for creating the website.
+                </p>
+              </p>
             </div>
           </div>
-          <div></div>
         </div>
-  </main>
-</body>
 
+        <div class="divisor">
+          <span id="tip-spotted"></span>
+        </div>
+
+        <div class="project-info">
+          <p class="project-title">Automatic Spotted</p>
+          <div class="project-details">
+            <div class="project-description">
+              <p class="txt-sisu">
+                <img
+                class="img-spotted"
+                src="https://i.ibb.co/B4gQbK8/343795824-549887887053998-6685332376784681196-n.png"
+              />
+                <strong>THE PROJECT</strong>
+
+                <br />
+
+                <p>
+                  I developed a project that automated the entire manual process
+                  of creating Instagram posts for a university entity.
+                </p>
+
+                <br />
+
+                <p>
+                  Previously, when a student submitted a "letter" through a Google
+                  form, the account administrators had to manually create the
+                  artwork for the post. With the goal of speeding up the process,
+                  the project involved a system hosted on a server that
+                  automatically collected these letters from the form, generated
+                  the corresponding artwork, and requested confirmation from
+                  moderators to verify if the publication was feasible.
+                </p>
+
+                <br />
+
+                <p>
+                  By doing so, we significantly reduced the time required to
+                  create posts and ensured greater efficiency in the Instagram
+                  publishing process.
+                </p>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+  </body>
 </html>
